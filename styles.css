@@ -1,7 +1,14 @@
 :root {
-  --primary-color: #adf0d4;
-  --secondary-color: #1fd8a4;
-  --bg-color: #0d1512;
+  --primary-color: #2b2b2b;
+  /* deep ink-like text */
+  --secondary-color: #5e5e5e;
+  /* soft gray for secondary text */
+  --bg-color: #fdfaf3;
+  /* paper-like background */
+  --accent-color: #9b5de5;
+  /* gentle violet accent for links/buttons */
+  --highlight-color: #f4e06d;
+  /* soft yellow highlight (like a highlighter) */
 }
 
 * {
@@ -26,6 +33,10 @@ body {
   color: var(--secondary-color);
 }
 
+.btnColor {
+  color: var(--accent-color);
+}
+
 header,
 main,
 footer {
@@ -38,6 +49,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.highlight {
+  background-color: var(--highlight-color);
+  padding: 0 4px;
+  border-radius: 4px;
 }
 
 nav {
@@ -71,6 +88,10 @@ section {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 .profile-photo {
   width: 150px;
   height: 150px;
@@ -78,13 +99,41 @@ section {
   object-fit: cover;
 }
 
+.aboutMe {
+  line-height: 1.5em;
+}
+
 .name-container {
   gap: 8px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.icon-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
 }
 
 
 .stats-container {
   display: flex;
   align-items: stretch;
+  flex-direction: column;
   gap: 24px;
+}
+
+
+@media (min-width: 640px) {
+  .stats-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
 }
